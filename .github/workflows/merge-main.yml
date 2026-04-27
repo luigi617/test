@@ -10,6 +10,8 @@ jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout for local action reference
+        uses: actions/checkout@v4
       - name: Merge main
         uses: ./.github/actions/merge-main
         with:
